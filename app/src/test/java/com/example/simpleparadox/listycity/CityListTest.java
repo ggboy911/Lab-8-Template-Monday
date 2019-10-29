@@ -68,7 +68,7 @@ class CityListTest {
         City city = new City("Victoria", "British Columbia");
         cityList.add(city);
 
-        assertEquals(2, cityList.countCities());
+        assertEquals(23, cityList.countCities());
 
         cityList.delete(mockCity());
 
