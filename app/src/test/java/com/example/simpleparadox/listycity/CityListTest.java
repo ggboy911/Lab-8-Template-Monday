@@ -68,7 +68,7 @@ class CityListTest {
         City city = new City("Victoria", "British Columbia");
         cityList.add(city);
 
-        assertEquals(23, cityList.countCities());
+        assertEquals(2, cityList.countCities());
 
         cityList.delete(mockCity());
 
@@ -85,6 +85,13 @@ class CityListTest {
         assertThrows(IllegalArgumentException.class, () -> {
             cityList.delete(mockCity());
         });
+    }
+
+    @Test
+    void testAddFails(){
+        CityList cityList = mockCityList();
+
+        cityList.add(123);
     }
 
     @Test
